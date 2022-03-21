@@ -1,11 +1,11 @@
 /*
 *
-* About types
+* Login types
 * make by phamthainb
 */
 import { ActionType } from 'typesafe-actions';
 import * as actions from './actions';
 
-export interface StoreAbout {}
+export interface StoreLogin {}
 
-export type ActionsAbout = ActionType<typeof actions>;
+export type ActionsLogin = ActionType<typeof actions>;

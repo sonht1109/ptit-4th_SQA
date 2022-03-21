@@ -1,7 +1,7 @@
 /*
- *
- * Home constants
- *
- */
+*
+* Home constants
+*  make by phamthainb
+*/
 
-export const TEST = 'HOME/TEST';
+export const GET = 'Home/GET';

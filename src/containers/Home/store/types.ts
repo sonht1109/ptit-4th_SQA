@@ -1,9 +1,11 @@
-import * as actions from './actions';
+/*
+*
+* Home types
+* make by phamthainb
+*/
 import { ActionType } from 'typesafe-actions';
+import * as actions from './actions';
 
-export interface HomeStore {
-  test: boolean;
-  str: string;
-}
+export interface StoreHome {}
 
 export type ActionsHome = ActionType<typeof actions>;

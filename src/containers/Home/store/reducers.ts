@@ -1,35 +1,20 @@
 /*
- *
- * Home reducers
- *
- */
+*
+* Home reducers
+* make by phamthainb
+*/
 import { Reducer } from 'redux';
-import { ActionsHome, HomeStore } from './types';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as types from './constants';
-import rootReducer from 'redux/root-reducers';
+import { ActionsHome, StoreHome } from "./types";
 
-const initState: HomeStore = {
-  test: true,
-  str: '',
-};
+const initState : StoreHome = { };
 
-const reducersHome: Reducer<HomeStore, ActionsHome> = (
-  state = initState,
-  actions: ActionsHome,
-) => {
-  switch (actions.type) {
-    case types.TEST: {
-      return {
-        ...state,
-        test: actions.payload,
-      };
-    }
-    default:
-      return { ...state };
-  }
+const reducersHome : Reducer<StoreHome, ActionsHome> = (state = initState, actions: ActionsHome) => {
+switch (actions.type) {
+default:
+return { ...state };
+}
 };
 
 export default reducersHome;
-
-export const selectHomeStore = (state: ReturnType<typeof rootReducer>) =>
-  state.Home;

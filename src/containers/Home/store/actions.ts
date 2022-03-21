@@ -1,11 +1,12 @@
 /*
- *
- * Home actions
- */
-
+*
+* Home actions
+* make by phamthainb
+*/
 import * as types from './constants';
+import { action } from 'typesafe-actions';
 
-export const changeTest = (val: boolean) => ({
-  type: types.TEST,
-  payload: val,
-});
+export const changeLogin = (val: boolean) => action(
+ types.GET,
+ val,
+);

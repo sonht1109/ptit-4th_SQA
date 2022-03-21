@@ -1,6 +1,6 @@
 /*
 *
-* About actions
+* Login actions
 * make by phamthainb
 */
 import * as types from './constants';
