@@ -2,9 +2,18 @@ import axios, { AxiosRequestConfig } from 'axios';
 import store from 'redux/store';
 import { changeLoading } from 'containers/App/store/actions';
 
+export const BASE_URL = 'http://localhost:8081/';
+
 // define common config for Axios
 const instanceAxios = {
-  baseURL: process.env.REACT_APP_API,
+  baseURL: 'http://localhost:8081/',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  // headers: {
+  //   'Access-Control-Allow-Origin': '*',
+  //   'Content-Type': 'application/json',
+  // },
 };
 
 const axiosConfig = axios.create(instanceAxios);

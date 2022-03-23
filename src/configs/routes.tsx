@@ -1,6 +1,7 @@
 import React from 'react';
 import DemoComponent from 'components/DemoComponent';
 import Login from 'containers/Login'
+import Order from 'containers/Order';
 
 export interface ItemRoute {
   name: string;
@@ -21,7 +22,13 @@ const ROUTES = [
     name: 'login',
     private: false,
     component: () => <Login />,
-    path: '/',
+    path: '/login',
+  },
+  {
+    name: 'order',
+    private: false,
+    component: () => <Order />,
+    path: '/order',
   },
 ];
 

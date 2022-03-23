@@ -9,6 +9,7 @@ import * as actions from "./actions";
 export type AppStore = {
   loading: boolean;
   lang: AppLanguage;
+  token: string | null;
 };
 
 export type ActionsApp = ActionType<typeof actions>;

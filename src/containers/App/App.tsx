@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GlobalStyle } from 'styles/global-styles';
 import { ThemeProvider } from 'styled-components';
 // css style configs
@@ -15,6 +15,8 @@ import LanguageProvider from './LanguageProvider';
 import Login from 'containers/Login';
 import Home from 'containers/Home';
 import 'antd/dist/antd.css';
+import Order from 'containers/Order';
+import Product from 'containers/Product';
 
 function App() {
   const { loading } = useSelector(selectAppStore);
@@ -29,6 +31,14 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+
+            <Route exact path="/product">
+              <Product />
+            </Route>
+
+            <Route exact path="/order">
+              <Order />
             </Route>
 
             <Route path="*">
