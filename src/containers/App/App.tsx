@@ -17,6 +17,7 @@ import Home from 'containers/Home';
 import 'antd/dist/antd.css';
 import Order from 'containers/Order';
 import Product from 'containers/Product';
+import Supplier from 'containers/Supplier';
 
 function App() {
   const { loading } = useSelector(selectAppStore);
@@ -39,6 +40,10 @@ function App() {
 
             <Route exact path="/order">
               <Order />
+            </Route>
+
+            <Route exact path="/supplier">
+              <Supplier />
             </Route>
 
             <Route path="*">

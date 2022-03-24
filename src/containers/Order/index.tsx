@@ -8,7 +8,6 @@ import React, { Children, memo, useEffect, useState } from 'react';
 import ErrorBound from 'components/ErrorBound';
 import useInjectReducer from 'redux/useInjectReducer';
 import reducersOrder from './store/reducers';
-import WrapOrder from './style';
 import Layout from 'components/Layout';
 import { requestToken } from 'api/axios';
 import API_URL from 'api/url';
@@ -63,7 +62,7 @@ function Order({}: Props) {
                   return (
                     <Col span={6}>
                       <Card
-                        title={d?.name}
+                        title={d?.staff?.name}
                         style={{
                           width: '100%',
                           cursor: 'pointer',
@@ -72,7 +71,6 @@ function Order({}: Props) {
                         }}
                         onClick={() => setSelected(isSelected ? null : d?.id)}
                       >
-                        <p>Nhân viên: {d?.staff?.name}</p>
                         <p>Ngày đặt: {d?.date}</p>
                         <p>Tổng giá tiền: {d?.total}</p>
                         <p>Tổng sản phẩm: {d?.listProduct?.length}</p>
