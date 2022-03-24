@@ -1,4 +1,4 @@
-import { Button, Form, message, Select } from 'antd';
+import { Button, Form, InputNumber, message, Select } from 'antd';
 import { useForm } from 'antd/lib/form/Form';
 import Input from 'antd/lib/input/Input';
 import { requestToken } from 'api/axios';
@@ -99,7 +99,7 @@ export default function Add({
           name="price"
           rules={[{ required: id ? false : true, message: 'Trường bắt buộc!' }]}
         >
-          <Input disabled={disabled} placeholder={detail?.price || ''} />
+          <InputNumber disabled={disabled} placeholder={detail?.price || ''} min={1} />
         </Form.Item>
 
         <Form.Item label="Mô tả" name="description">
