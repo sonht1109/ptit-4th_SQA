@@ -10,10 +10,10 @@ import { BiPackage } from 'react-icons/bi';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { FaTruck } from 'react-icons/fa';
+import { BsTruck } from 'react-icons/bs';
+import { AiOutlineLogout } from 'react-icons/ai';
 
 const Layout = ({ children }: { children: ReactNode }) => {
-
   return (
     <SLayout>
       <Menu style={{ width: 256 }} mode="inline">
@@ -31,8 +31,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
         </Menu.Item>
         <Menu.Item key="3">
           <Link to="/supplier">
-            <FaTruck size={20} />
+            <BsTruck size={20} />
             <span>Quản lý nhà cung cấp</span>
+          </Link>
+        </Menu.Item>
+
+        <Menu.Item key="4">
+          <Link to="/login">
+            <AiOutlineLogout size={20} />
+            <span>Đăng xuất</span>
           </Link>
         </Menu.Item>
       </Menu>
