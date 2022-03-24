@@ -35,10 +35,10 @@ export default function Add({
   }, [id]);
 
   const onFinish = (values: any) => {
-    const selectedSuppliers = values.suppliers?.map((s: string) =>
-      s ? JSON.parse(s) : '',
-    );
-    values.suppliers = selectedSuppliers;
+    // const selectedSuppliers = values.suppliers?.map((s: string) =>
+    //   s ? JSON.parse(s) : '',
+    // );
+    // values.suppliers = selectedSuppliers;
 
     const data = { ...detail, ...cleanObj(values) };
 
@@ -117,7 +117,7 @@ export default function Add({
           <Input disabled={disabled} placeholder={detail?.guide || ''} />
         </Form.Item>
 
-        <Form.Item label="Nhà cung cấp" name="suppliers">
+        {/* <Form.Item label="Nhà cung cấp" name="suppliers">
           <Select disabled={disabled} mode="multiple">
             {React.Children.toArray(
               suppliers.map((s: any) => (
@@ -127,7 +127,7 @@ export default function Add({
               )),
             )}
           </Select>
-        </Form.Item>
+        </Form.Item> */}
 
         {!disabled && (
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>

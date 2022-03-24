@@ -5,7 +5,8 @@ const API_URL = {
   },
   ORDER: {
     GET_ALL: 'api/orders',
-    CREATE: 'order',
+    CREATE: 'api/order',
+    GET: (id: number) => 'api/order/' + id,
   },
   PRODUCT: {
     GET_ALL: 'api/product/lists',
